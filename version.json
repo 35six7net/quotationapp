@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.36",
+  "appVersion": "1.5.34",
   "buildId": "2026-05-25-init",
-  "buildTime": "2026-05-25T05:35:50Z",
+  "buildTime": "2026-05-25T06:42:03Z",
   "productsVersion": "2026-05-16-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.6",
@@ -11,15 +11,19 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "修正語言切換狀態未同步：<html lang> 屬性、JavaScript lang 變數、localStorage 三者統一",
-      "切換英文後重整頁面依然保持英文（之前永遠 fallback 回中文）",
-      "修復 PDF 匯出 / customerType / i18n fallback 等 7 處讀 document.documentElement.lang 永遠回傳 zh 嘅 silent bug"
+      "記憶體洩漏修補：per-row 資源清理 + 孤兒 dropdown sweeper",
+      "PerformanceMonitor 加 pause/resume/destroy lifecycle、背景 tab 自動暫停",
+      "csvEditorUndoStack 雙 cap（10 entries + 30MB）避免大型 CSV 爆 heap",
+      "passwordManagerObserver 加 250ms debounce + early break",
+      "修復 generateSystemReport eventStats ReferenceError + 加孤兒 dropdown 統計"
     ],
     "en": [
-      "Sync language state: <html lang>, JS lang variable, and localStorage are now unified",
-      "English selection now persists across page reloads (previously always reverted to Chinese)",
-      "Fix 7 silent state-desync sites reading document.documentElement.lang (PDF export, customerType, i18n fallback, etc.)"
+      "Memory leak hardening: per-row teardown + orphan dropdown sweeper",
+      "PerformanceMonitor now exposes pause/resume/destroy lifecycle; auto-pauses on hidden tabs",
+      "csvEditorUndoStack dual cap (10 entries + 30MB) prevents heap blow-up",
+      "passwordManagerObserver: 250ms debounce + early break to avoid quadratic CPU on bulk insert",
+      "Fix generateSystemReport eventStats ReferenceError + add orphan dropdown stat"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.36"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.34"
 }
