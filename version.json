@@ -1,0 +1,23 @@
+{
+  "appVersion": "1.5.31",
+  "buildId": "2026-05-25-08c4a1f",
+  "buildTime": "2026-05-25T03:10:00Z",
+  "productsVersion": "2026-05-16-001",
+  "storageVersion": "2.6.6",
+  "minSupportedVersion": "1.5.0",
+  "forceReload": false,
+  "channel": "stable",
+  "releaseNotes": {
+    "zh-HK": [
+      "修正 Split Invoice 總金額計算錯誤",
+      "新增按 Band Price 即時更新功能",
+      "提升大型 CSV 載入速度約 35%"
+    ],
+    "en": [
+      "Fix Split Invoice total calculation",
+      "Add live Band Price refresh",
+      "~35% faster large-CSV load"
+    ]
+  },
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.31"
+}
