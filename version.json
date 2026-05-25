@@ -1,6 +1,6 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.32",
+  "appVersion": "1.5.33",
   "buildId": "2026-05-25-init",
   "buildTime": "2026-05-25T03:56:05Z",
   "productsVersion": "2026-05-16-001",
