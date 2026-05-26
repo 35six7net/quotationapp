@@ -1,6 +1,6 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.36",
+  "appVersion": "1.5.35",
   "buildId": "2026-05-26-group-row-tools",
   "buildTime": "2026-05-26T12:26:00Z",
   "productsVersion": "2026-05-16-001",
