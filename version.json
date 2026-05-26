@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.34",
-  "buildId": "2026-05-25-init",
-  "buildTime": "2026-05-25T06:42:03Z",
+  "appVersion": "1.5.35",
+  "buildId": "2026-05-26-group-row-tools",
+  "buildTime": "2026-05-26T12:26:00Z",
   "productsVersion": "2026-05-16-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.6",
@@ -11,19 +11,19 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "記憶體洩漏修補：per-row 資源清理 + 孤兒 dropdown sweeper",
-      "PerformanceMonitor 加 pause/resume/destroy lifecycle、背景 tab 自動暫停",
-      "csvEditorUndoStack 雙 cap（10 entries + 30MB）避免大型 CSV 爆 heap",
-      "passwordManagerObserver 加 250ms debounce + early break",
-      "修復 generateSystemReport eventStats ReferenceError + 加孤兒 dropdown 統計"
+      "新增 line-no「向上／向下插入一行」操作（↑/↓）",
+      "修復拖放排序：主行移動時 Alt/Rec 子行會整組跟隨",
+      "插入「向下」會對齊到群組尾（避免打散主行與子行）",
+      "補齊事件路由 insert-row-above / insert-row-below",
+      "line-no 介面微調：行號與 ↑/↓ 分行顯示"
     ],
     "en": [
-      "Memory leak hardening: per-row teardown + orphan dropdown sweeper",
-      "PerformanceMonitor now exposes pause/resume/destroy lifecycle; auto-pauses on hidden tabs",
-      "csvEditorUndoStack dual cap (10 entries + 30MB) prevents heap blow-up",
-      "passwordManagerObserver: 250ms debounce + early break to avoid quadratic CPU on bulk insert",
-      "Fix generateSystemReport eventStats ReferenceError + add orphan dropdown stat"
+      "Added line-no actions to insert row above/below (↑/↓)",
+      "Fixed drag-and-drop ordering: moving a parent row now moves Alt/Rec children as one group",
+      "Insert-below now anchors to group tail to avoid splitting parent/child blocks",
+      "Added action routing for insert-row-above / insert-row-below",
+      "line-no UI tweak: row number and ↑/↓ controls are displayed on separate lines"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.34"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.35"
 }
