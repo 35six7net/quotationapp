@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.43",
-  "buildId": "2026-05-31-v31101-cutoff-nb-seg",
-  "buildTime": "2026-05-31T00:56:17Z",
+  "appVersion": "1.5.44",
+  "buildId": "2026-05-31-v31103-edm-dimsum-groups",
+  "buildTime": "2026-05-31T15:04:40Z",
   "productsVersion": "2026-05-16-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
@@ -11,6 +11,11 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
+      "EDM 設定 modal 完善：狀態保存、mode 切換、真實 HTML preview 與 package / bundle 顯示更一致",
+      "Dim Sum Paper 支援多頁產品，超過 36 個 item 會分頁並顯示 Page X / Y，不再限制只輸出一頁",
+      "下載 PNG 修正：Dim Sum Paper 多頁會逐頁下載 page_01 / page_02；移除 invalid table/div wrapper 令 page 1 不再空白",
+      "Dim Sum Paper 輸出改為 HTML-safe text escape，避免產品描述中的特殊字元令 DOM parser 走位",
+      "產品群組預覽改善：讀取 product CSV descriptionEng / descriptionChi mapping，支援中英顏色縮寫與 tape 尺寸 / 碼數 variant 自動群組",
       "Cut Off Segmentation 修正：N0-N6 新客以首次落單月份優先判斷，當月 / 近 6 個月 NB 不再被 Cut Off A+ / A1-A6 邏輯覆蓋",
       "Segmentation filter UI 更新 Cut Off 說明，標示 A+ 只代表非 N0-N6 新客且基準月或之後仍有訂單",
       "MTD 當前狀態新增 KPI Cut Off Day，可用最新資料日、昨日、今日快速查詢，active KPI month 不再限制當月",
@@ -38,6 +43,11 @@
       "Solution Preview / Solution Mix MTD 修正：本月 MTD Daily 作 source of truth，支援多個 Item Code 欄名，零金額命中仍會顯示客戶與 Solution row"
     ],
     "en": [
+      "Improved EDM config modal persistence, mode switching, real HTML preview, and package / bundle rendering consistency",
+      "Dim Sum Paper now supports multiple pages: more than 36 items are split into Page X / Y instead of being capped to one page",
+      "Fixed PNG download for multi-page Dim Sum Paper: pages export as page_01 / page_02, and page 1 no longer renders blank",
+      "Dim Sum Paper output now escapes product text safely to prevent special characters from breaking the preview DOM",
+      "Improved product group preview by loading product CSV descriptionEng / descriptionChi mapping, color abbreviations, and tape size / yard variants",
       "Fixed Cut Off Segmentation: N0-N6 new customers now take priority by first-order month, so current / recent NB accounts are no longer overridden by Cut Off A+ / A1-A6 logic",
       "Updated Segmentation filter UI copy for Cut Off mode to clarify that A+ only covers non-N0-N6 customers with orders on or after the cut-off base month",
       "MTD Current Status adds KPI Cut Off Day with latest-data, yesterday, and today shortcuts; active KPI month is no longer limited to the current month",
@@ -65,5 +75,5 @@
       "Fixed Solution Preview / Solution Mix MTD handling: current-month MTD Daily is the source of truth, Item Code aliases are supported, and zero-amount hits still show customers and Solution rows"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.43"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.44"
 }
