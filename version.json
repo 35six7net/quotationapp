@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.61",
-  "buildId": "2026-06-27-v31129-export-pdf-zip-responsive-fix",
-  "buildTime": "2026-06-27T08:14:10Z",
+  "appVersion": "1.5.62",
+  "buildId": "2026-07-08-v31130-similar-product-quick-add",
+  "buildTime": "2026-07-09T00:55:00Z",
   "productsVersion": "2026-05-16-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
@@ -11,19 +11,19 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "updateTotals 修補：折扣／訂金等百分比上限 100%，防止總計變負數",
-      "恢復空備份／清除草稿後總計正確歸零（cache dirty 漏標修正）",
-      "備份還原 Internal Info「Unit Cost 加價 (%)」及 cashMargin",
-      "匯出 modal 關閉時確保 floatingShortcuts 重新顯示",
-      "修復 PDF/ZIP 匯出 data-action 跨 script scope no-op，並加入 ZIP 附件生成失敗降級提示"
+      "Similar Product Quick Add 智能識別升級：80% firm threshold，候選會完整列出供確認",
+      "混合中英 token pool 與資料化 alias table，改善 Lavazza、Vitasoy、Watsons 等相似產品配對",
+      "尺寸／容量／包裝獨立判斷，不同規格會顯示 warning 並預設不勾選",
+      "候選描述改為中英分行顯示，提升 Quick Add 檢查可讀性",
+      "Product Group Preview 補上描述相似度 fallback，支援以關鍵字補齊顏色／規格群組"
     ],
     "en": [
-      "updateTotals fix: clamp discount/deposit/tax/additional-charge to 100% max",
-      "Empty backup restore and clear-draft now reset totals correctly (cache dirty flag)",
-      "Backup restore persists Internal Info unit-cost markup and cashMargin",
-      "Export modal close ensures floatingShortcuts is shown again",
-      "Fix PDF/ZIP export data-action no-op across script scopes and add ZIP attachment fallback warnings"
+      "Similar Product Quick Add matching now uses an 80% firm threshold and lists all candidates for review",
+      "Mixed Chinese/English token pooling and data-driven aliases improve Lavazza, Vitasoy, Watsons matching",
+      "Size, volume, and pack differences are detected separately with warnings and unchecked defaults",
+      "Candidate descriptions now split English and Chinese onto separate lines for easier review",
+      "Product Group Preview adds the same description-similarity fallback for color/spec group recovery"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.52"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.62"
 }
