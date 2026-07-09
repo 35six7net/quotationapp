@@ -1,9 +1,9 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.62",
-  "buildId": "2026-07-08-v31130-similar-product-quick-add",
-  "buildTime": "2026-07-09T00:55:00Z",
-  "productsVersion": "2026-05-16-001",
+  "appVersion": "1.5.64",
+  "buildId": "2026-07-10-v31132-platform-default-stock-products-cache",
+  "buildTime": "2026-07-09T17:00:00Z",
+  "productsVersion": "2026-07-10-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
   "minSupportedVersion": "1.5.0",
@@ -11,19 +11,22 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "Similar Product Quick Add 智能識別升級：80% firm threshold，候選會完整列出供確認",
-      "混合中英 token pool 與資料化 alias table，改善 Lavazza、Vitasoy、Watsons 等相似產品配對",
-      "尺寸／容量／包裝獨立判斷，不同規格會顯示 warning 並預設不勾選",
-      "候選描述改為中英分行顯示，提升 Quick Add 檢查可讀性",
-      "Product Group Preview 補上描述相似度 fallback，支援以關鍵字補齊顏色／規格群組"
+      "平台預設產品資料更新至 2026-07-10-001，使用 July 2026 product template 並支援 unitPrice 空白時 fallback price_N2 / price_G",
+      "新增平台預設 stock.default.js（13,722 筆 stock metadata），未上載 stock Excel 時自動提供 Section / Family / Category / Sub-Category / Brand 配對",
+      "stock Excel 上載與 auto-load 會持久化完整 stockData；auto-load 會用檔名、修改時間、大小判斷未更新檔案並直接復用已保存資料",
+      "重置為平台預設會同時清除用戶產品 CSV 與 stock Excel cache，並重新套用平台 products.default.js / stock.default.js",
+      "產品與 stock default loader 改用 jsDelivr @main 加同源 fallback，移除 GitHub raw script fallback，避免 text/plain MIME 被瀏覽器拒絕執行",
+      "Similar Product Quick Add 會利用 stock/category manager 的 brand/category metadata 補充同品牌／同類型候選；metadata-only 命中不會預設勾選"
     ],
     "en": [
-      "Similar Product Quick Add matching now uses an 80% firm threshold and lists all candidates for review",
-      "Mixed Chinese/English token pooling and data-driven aliases improve Lavazza, Vitasoy, Watsons matching",
-      "Size, volume, and pack differences are detected separately with warnings and unchecked defaults",
-      "Candidate descriptions now split English and Chinese onto separate lines for easier review",
-      "Product Group Preview adds the same description-similarity fallback for color/spec group recovery"
+      "Platform default products are updated to 2026-07-10-001 using the July 2026 product template with unitPrice fallback to price_N2 / price_G",
+      "Added platform default stock.default.js with 13,722 stock metadata rows so Section / Family / Category / Sub-Category / Brand mappings are available before user stock uploads",
+      "Stock Excel uploads and auto-load now persist full stockData; auto-load reuses saved data when filename, modified time, and size are unchanged",
+      "Reset to platform default now clears both uploaded product CSV and stock Excel cache, then reapplies platform products.default.js / stock.default.js",
+      "Product and stock default loaders now use jsDelivr @main with same-origin fallback, removing GitHub raw script fallback to avoid text/plain MIME execution failures",
+      "Similar Product Quick Add now uses stock/category manager brand/category metadata to include same-brand/category candidates; metadata-only matches are not preselected"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.62"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.64",
+  "stockVersion": "2026-07-10-001"
 }
