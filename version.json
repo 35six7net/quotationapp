@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.64",
-  "buildId": "2026-07-10-v31132-platform-default-stock-products-cache",
-  "buildTime": "2026-07-09T17:00:00Z",
+  "appVersion": "1.5.65",
+  "buildId": "2026-07-11-v31134-coffee-bean-rotation-similar-manual",
+  "buildTime": "2026-07-11T12:00:00Z",
   "productsVersion": "2026-07-10-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
@@ -11,22 +11,22 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "平台預設產品資料更新至 2026-07-10-001，使用 July 2026 product template 並支援 unitPrice 空白時 fallback price_N2 / price_G",
-      "新增平台預設 stock.default.js（13,722 筆 stock metadata），未上載 stock Excel 時自動提供 Section / Family / Category / Sub-Category / Brand 配對",
-      "stock Excel 上載與 auto-load 會持久化完整 stockData；auto-load 會用檔名、修改時間、大小判斷未更新檔案並直接復用已保存資料",
-      "重置為平台預設會同時清除用戶產品 CSV 與 stock Excel cache，並重新套用平台 products.default.js / stock.default.js",
-      "產品與 stock default loader 改用 jsDelivr @main 加同源 fallback，移除 GitHub raw script fallback，避免 text/plain MIME 被瀏覽器拒絕執行",
-      "Similar Product Quick Add 會利用 stock/category manager 的 brand/category metadata 補充同品牌／同類型候選；metadata-only 命中不會預設勾選"
+      "咖啡訂閱新增「可換豆」計算模式：可切換固定訂閱／可換豆，並設定換豆週期（月）",
+      "可換豆模式下豆款可分配到最多 2 個換豆套餐，各套餐以最貴豆款保守定價；「不列入」改走正常單項計費並計入總額",
+      "咖啡訂閱預覽加套餐說明整列；正式 Email 分行列出可選豆款並標示每 N 個月可更換，價格表標題改 Package N",
+      "Similar Product Quick Add 改為手動「搵相似／Find similar」按鈕；批量 Quick Entry／單行輸入不再自動逐行掃描相似產品",
+      "Product search dropdown 會將跳脫引號還原為正常引號，避免描述多顯示反斜線",
+      "Stock Available auto-load 判斷檔案未更新時會確實復用用戶 stock cache，並將 stock-only item 加入產品搜尋"
     ],
     "en": [
-      "Platform default products are updated to 2026-07-10-001 using the July 2026 product template with unitPrice fallback to price_N2 / price_G",
-      "Added platform default stock.default.js with 13,722 stock metadata rows so Section / Family / Category / Sub-Category / Brand mappings are available before user stock uploads",
-      "Stock Excel uploads and auto-load now persist full stockData; auto-load reuses saved data when filename, modified time, and size are unchanged",
-      "Reset to platform default now clears both uploaded product CSV and stock Excel cache, then reapplies platform products.default.js / stock.default.js",
-      "Product and stock default loaders now use jsDelivr @main with same-origin fallback, removing GitHub raw script fallback to avoid text/plain MIME execution failures",
-      "Similar Product Quick Add now uses stock/category manager brand/category metadata to include same-brand/category candidates; metadata-only matches are not preselected"
+      "Coffee subscription adds Flexible Bean Rotation: switch Fixed vs Rotate and set bean-change cycle (months)",
+      "In rotate mode, beans can be assigned to up to 2 packages priced at the most expensive bean; Excluded beans stay as normal line items in the total",
+      "Coffee preview shows a package description row; formal email lists selectable beans with change-every-N-mo note and Package N pricing headers",
+      "Similar Product Quick Add is now manual via Find similar; bulk Quick Entry / single-row input no longer auto-scans similar products",
+      "Product search dropdown normalizes escaped quotes so descriptions show proper quotation marks",
+      "Stock Available auto-load reuses saved user stock cache when the file is unchanged, and stock-only items remain searchable"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.64",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.65",
   "stockVersion": "2026-07-10-001"
 }
