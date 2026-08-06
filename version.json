@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.65",
-  "buildId": "2026-07-11-v31134-coffee-bean-rotation-similar-manual",
-  "buildTime": "2026-07-11T12:00:00Z",
+  "appVersion": "1.5.66",
+  "buildId": "2026-08-06-v31137-product-db-draft-export-restore",
+  "buildTime": "2026-08-06T14:42:39Z",
   "productsVersion": "2026-07-10-001",
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
@@ -11,22 +11,18 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "咖啡訂閱新增「可換豆」計算模式：可切換固定訂閱／可換豆，並設定換豆週期（月）",
-      "可換豆模式下豆款可分配到最多 2 個換豆套餐，各套餐以最貴豆款保守定價；「不列入」改走正常單項計費並計入總額",
-      "咖啡訂閱預覽加套餐說明整列；正式 Email 分行列出可選豆款並標示每 N 個月可更換，價格表標題改 Package N",
-      "Similar Product Quick Add 改為手動「搵相似／Find similar」按鈕；批量 Quick Entry／單行輸入不再自動逐行掃描相似產品",
-      "Product search dropdown 會將跳脫引號還原為正常引號，避免描述多顯示反斜線",
-      "Stock Available auto-load 判斷檔案未更新時會確實復用用戶 stock cache，並將 stock-only item 加入產品搜尋"
+      "產品資料庫新增最後更新狀態；超過 30 日未更新會轉紅並提示上載最新 Product CSV",
+      "修正草稿已存於 IndexedDB 但導出仍讀 localStorage，導致誤報沒有草稿數據",
+      "確認並匯出 ZIP 現包含完整草稿 JSON；檔名加入 Account No. 及 Company Name",
+      "草稿 JSON 匯出前即時擷取最新畫面欄位；啟動時直接由 IndexedDB 自動復原草稿"
     ],
     "en": [
-      "Coffee subscription adds Flexible Bean Rotation: switch Fixed vs Rotate and set bean-change cycle (months)",
-      "In rotate mode, beans can be assigned to up to 2 packages priced at the most expensive bean; Excluded beans stay as normal line items in the total",
-      "Coffee preview shows a package description row; formal email lists selectable beans with change-every-N-mo note and Package N pricing headers",
-      "Similar Product Quick Add is now manual via Find similar; bulk Quick Entry / single-row input no longer auto-scans similar products",
-      "Product search dropdown normalizes escaped quotes so descriptions show proper quotation marks",
-      "Stock Available auto-load reuses saved user stock cache when the file is unchanged, and stock-only items remain searchable"
+      "Product database freshness is now shown; databases older than 30 days display a warning to upload the latest Product CSV",
+      "Fixed draft export incorrectly reading localStorage after drafts had migrated to IndexedDB",
+      "Confirm & Export ZIP now includes the full draft JSON, named with Account No. and Company Name",
+      "Draft JSON captures the latest visible form values at export time, and startup restoration now reads IndexedDB directly"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.65",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.66",
   "stockVersion": "2026-07-10-001"
 }
