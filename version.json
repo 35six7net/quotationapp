@@ -1,9 +1,16 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.66",
-  "buildId": "2026-08-06-v31137-product-db-draft-export-restore",
-  "buildTime": "2026-08-06T14:42:39Z",
+  "appVersion": "1.5.68",
+  "buildId": "2026-08-07-v31139-product-db-status-ui",
+  "buildTime": "2026-08-07T01:41:16Z",
   "productsVersion": "2026-07-10-001",
+  "productDatabase": {
+    "availableThrough": "07-2026",
+    "downloads": {
+      "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBDb9G1-9l2Qat5jQ7JjOBIAYvUbdtO_l1zx2rMEdSdFpI?e=zpkGSy",
+      "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQCjFNyVCmmmSLsFBVPCQUeaAb_EbqDDn4BZNWYfoNz8hQo?e=SC8ban"
+    }
+  },
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
   "minSupportedVersion": "1.5.0",
@@ -11,18 +18,22 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "產品資料庫新增最後更新狀態；超過 30 日未更新會轉紅並提示上載最新 Product CSV",
+      "產品資料庫月份及兩個下載入口整合成緊湊狀態元件，改善桌面及手機工具列排版",
+      "產品資料庫狀態改由 version.json 的官方資料月份判斷，不再使用用戶上載時間",
+      "產品資料庫顯示資料可用至 MM-YYYY，並提供 Full Year 及僅限當月兩個可配置下載入口",
       "修正草稿已存於 IndexedDB 但導出仍讀 localStorage，導致誤報沒有草稿數據",
       "確認並匯出 ZIP 現包含完整草稿 JSON；檔名加入 Account No. 及 Company Name",
       "草稿 JSON 匯出前即時擷取最新畫面欄位；啟動時直接由 IndexedDB 自動復原草稿"
     ],
     "en": [
-      "Product database freshness is now shown; databases older than 30 days display a warning to upload the latest Product CSV",
+      "Product database month and download actions are now grouped in a compact, responsive toolbar status component",
+      "Product database status now uses the official release month in version.json instead of the user's upload time",
+      "Product database availability is shown as MM-YYYY, with configurable Full Year and current-month-only download links",
       "Fixed draft export incorrectly reading localStorage after drafts had migrated to IndexedDB",
       "Confirm & Export ZIP now includes the full draft JSON, named with Account No. and Company Name",
       "Draft JSON captures the latest visible form values at export time, and startup restoration now reads IndexedDB directly"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.66",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.68",
   "stockVersion": "2026-07-10-001"
 }
