@@ -6,6 +6,7 @@
   "productsVersion": "2026-07-10-001",
   "productDatabase": {
     "availableThrough": "08-2026",
+    "releasedOn": "2026-08-10",
     "downloads": {
       "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBlI4aIGmrdSK0XDrZllrs_AZZvlJsb7ed109HDbw2zZw8?e=9brebP",
       "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBlI4aIGmrdSK0XDrZllrs_AZZvlJsb7ed109HDbw2zZw8?e=RpRHWr"
@@ -19,7 +20,7 @@
   "releaseNotes": {
     "zh-HK": [
       "產品資料庫月份及兩個下載入口整合成緊湊狀態元件，改善桌面及手機工具列排版",
-      "產品資料庫狀態改由 version.json 的官方資料月份判斷，不再使用用戶上載時間",
+      "產品資料庫狀態以 version.json 的官方資料月份為準，並以官方發布日期 releasedOn（YYYY-MM-DD）精確比對用戶上載日期",
       "產品資料庫顯示資料可用至 MM-YYYY，並提供 Full Year 及僅限當月兩個可配置下載入口",
       "修正草稿已存於 IndexedDB 但導出仍讀 localStorage，導致誤報沒有草稿數據",
       "確認並匯出 ZIP 現包含完整草稿 JSON；檔名加入 Account No. 及 Company Name",
@@ -27,7 +28,7 @@
     ],
     "en": [
       "Product database month and download actions are now grouped in a compact, responsive toolbar status component",
-      "Product database status now uses the official release month in version.json instead of the user's upload time",
+      "Product database status uses the official month in version.json, with releasedOn (YYYY-MM-DD) for exact comparison against the user's upload date",
       "Product database availability is shown as MM-YYYY, with configurable Full Year and current-month-only download links",
       "Fixed draft export incorrectly reading localStorage after drafts had migrated to IndexedDB",
       "Confirm & Export ZIP now includes the full draft JSON, named with Account No. and Company Name",
