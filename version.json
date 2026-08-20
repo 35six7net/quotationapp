@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.69",
-  "buildId": "2026-08-07-v31139-product-db-status-ui",
-  "buildTime": "2026-08-07T01:41:16Z",
+  "appVersion": "1.5.70",
+  "buildId": "2026-08-20-v31141-delivery-note-pdf-draft-export",
+  "buildTime": "2026-08-20T10:07:23Z",
   "productsVersion": "2026-07-10-001",
   "productDatabase": {
     "availableThrough": "08-2026",
@@ -19,22 +19,14 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "產品資料庫月份及兩個下載入口整合成緊湊狀態元件，改善桌面及手機工具列排版",
-      "產品資料庫狀態以 version.json 的官方資料月份為準，並以官方發布日期 releasedOn（YYYY-MM-DD）精確比對用戶上載日期",
-      "產品資料庫顯示資料可用至 MM-YYYY，並提供 Full Year 及僅限當月兩個可配置下載入口",
-      "修正草稿已存於 IndexedDB 但導出仍讀 localStorage，導致誤報沒有草稿數據",
-      "確認並匯出 ZIP 現包含完整草稿 JSON；檔名加入 Account No. 及 Company Name",
-      "草稿 JSON 匯出前即時擷取最新畫面欄位；啟動時直接由 IndexedDB 自動復原草稿"
+      "Delivery Note PDF 新增簽收／公司蓋章位置，強制隱藏產品圖片，並修正 Description 誤置右",
+      "報價表頭新增產品行快捷操作、Toolbar 匯入草稿入口，草稿 JSON 只輸出當前單一內容"
     ],
     "en": [
-      "Product database month and download actions are now grouped in a compact, responsive toolbar status component",
-      "Product database status uses the official month in version.json, with releasedOn (YYYY-MM-DD) for exact comparison against the user's upload date",
-      "Product database availability is shown as MM-YYYY, with configurable Full Year and current-month-only download links",
-      "Fixed draft export incorrectly reading localStorage after drafts had migrated to IndexedDB",
-      "Confirm & Export ZIP now includes the full draft JSON, named with Account No. and Company Name",
-      "Draft JSON captures the latest visible form values at export time, and startup restoration now reads IndexedDB directly"
+      "Delivery Note PDFs now include a receipt/company-chop area, always hide product images, and left-align Description correctly",
+      "Added product-row shortcuts and a toolbar draft-import action; draft JSON now exports only the current single draft"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.68",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.70",
   "stockVersion": "2026-07-10-001"
 }
