@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.70",
-  "buildId": "2026-08-20-v31141-delivery-note-pdf-draft-export",
-  "buildTime": "2026-08-20T10:07:23Z",
+  "appVersion": "1.5.71",
+  "buildId": "2026-08-21-v31142-payment-qr-config",
+  "buildTime": "2026-08-20T21:54:47Z",
   "productsVersion": "2026-07-10-001",
   "productDatabase": {
     "availableThrough": "08-2026",
@@ -12,6 +12,11 @@
       "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBlI4aIGmrdSK0XDrZllrs_AZZvlJsb7ed109HDbw2zZw8?e=RpRHWr"
     }
   },
+  "paymentMethods": {
+    "guideQrUrl": "https://www.lyreco.com/group/hongkong/system/files/media-files/2025-11/payment-methods-v3_1.pdf",
+    "paymeMerchantUrl": "https://qr.payme.hsbc.com.hk/2/HaL3kbP1v8dZu49tcmn8jw",
+    "fpsMerchantPayload": "00020101021226290012hk.com.hkicl02091124615125204000053033445802HK5902NA6002HK6304391B"
+  },
   "holidaysVersion": "2026-05-25",
   "storageVersion": "2.6.7",
   "minSupportedVersion": "1.5.0",
@@ -19,14 +24,18 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "Delivery Note PDF 新增簽收／公司蓋章位置，強制隱藏產品圖片，並修正 Description 誤置右",
-      "報價表頭新增產品行快捷操作、Toolbar 匯入草稿入口，草稿 JSON 只輸出當前單一內容"
+      "PDF QR Code 新增 Payment Methods、WhatsApp、PayMe 及 FPS 四種清晰用途卡片，加入品牌圖示、掃描提示及穩定中文渲染",
+      "Invoice／Proforma Invoice 統一付款到期日、Billing Address、隱藏產品圖片、總計與 QR Code 版面規則",
+      "手機 PDF 匯出改用 Noto Sans HK subset 字型、非阻塞 base64 轉換及逾時保護，並新增經資源稽核的 deploy 建置流程",
+      "付款方法指引、PayMe 商戶連結及 FPS 商戶資料改由 version.json 遙距更新，無需等待完整平台部署"
     ],
     "en": [
-      "Delivery Note PDFs now include a receipt/company-chop area, always hide product images, and left-align Description correctly",
-      "Added product-row shortcuts and a toolbar draft-import action; draft JSON now exports only the current single draft"
+      "PDF QR codes now use clear Payment Methods, WhatsApp, PayMe, and FPS purpose cards with brand marks, scan guidance, and reliable Chinese rendering",
+      "Invoice and Proforma Invoice exports now share payment due-date, Billing Address, hidden-product-image, totals, and QR layout rules",
+      "Mobile PDF export now uses Noto Sans HK subset fonts, non-blocking base64 conversion, timeout protection, and an audited deploy build",
+      "Payment guide, PayMe merchant, and FPS merchant details can now be updated remotely through version.json without waiting for a full app deployment"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.70",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.71",
   "stockVersion": "2026-07-10-001"
 }
