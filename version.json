@@ -1,9 +1,9 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.71",
-  "buildId": "2026-08-21-v31142-payment-qr-config",
-  "buildTime": "2026-08-20T21:54:47Z",
-  "productsVersion": "2026-07-10-001",
+  "appVersion": "1.5.72",
+  "buildId": "2026-08-28-v31143-nb-analysis-history-mtd",
+  "buildTime": "2026-08-28T14:12:12Z",
+  "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "08-2026",
     "releasedOn": "2026-08-10",
@@ -24,18 +24,22 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "PDF QR Code 新增 Payment Methods、WhatsApp、PayMe 及 FPS 四種清晰用途卡片，加入品牌圖示、掃描提示及穩定中文渲染",
-      "Invoice／Proforma Invoice 統一付款到期日、Billing Address、隱藏產品圖片、總計與 QR Code 版面規則",
-      "手機 PDF 匯出改用 Noto Sans HK subset 字型、非阻塞 base64 轉換及逾時保護，並新增經資源稽核的 deploy 建置流程",
-      "付款方法指引、PayMe 商戶連結及 FPS 商戶資料改由 version.json 遙距更新，無需等待完整平台部署"
+      "NB 分析新增每月獨立 Sales／Margin Target、季度及年度 KPI，並按已設定月份加權計算目標與追數進度",
+      "季度／年度 NB 新增過去紀錄、Segmentation、Last Order 及雙工作表 Excel 匯出，並修正取消單 cohort 與 adjustment 雜訊",
+      "MTD Margin Calculator 可由合併 Sales History 搜尋帳戶及選取 Order，自動帶入 Sales Amount 與加權 Margin",
+      "客戶銷售指標標題改為去年同月 Sales 及 MTD YoY，與實際數據口徑一致",
+      "平台預設產品及庫存資料已更新：Products 2026-08-28-001（5,269 筆），Stock 2026-08-25-001（14,280 筆）",
+      "平台預設 Stock-only Item 現會以無價格虛擬產品加入 Item Code／Description 搜尋，補齊 9,226 個只存在於 stock.default.js 的項目"
     ],
     "en": [
-      "PDF QR codes now use clear Payment Methods, WhatsApp, PayMe, and FPS purpose cards with brand marks, scan guidance, and reliable Chinese rendering",
-      "Invoice and Proforma Invoice exports now share payment due-date, Billing Address, hidden-product-image, totals, and QR layout rules",
-      "Mobile PDF export now uses Noto Sans HK subset fonts, non-blocking base64 conversion, timeout protection, and an audited deploy build",
-      "Payment guide, PayMe merchant, and FPS merchant details can now be updated remotely through version.json without waiting for a full app deployment"
+      "NB analytics now supports monthly Sales and Margin targets plus quarterly and annual KPIs, with weighted targets and pacing based on configured months",
+      "Quarterly and annual NB history now includes segmentation, last order, and two-sheet Excel export, with fixes for cancelled-order cohorts and adjustment noise",
+      "The MTD Margin Calculator can search merged Sales History by account and select orders to populate Sales Amount and weighted Margin",
+      "Customer sales indicator labels now correctly describe prior-year same-month Sales and MTD YoY",
+      "Platform default product and stock data has been refreshed: Products 2026-08-28-001 (5,269 records) and Stock 2026-08-25-001 (14,280 records)",
+      "Platform Stock-only items are now added to Item Code and Description search as unpriced virtual products, covering 9,226 items found only in stock.default.js"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.71",
-  "stockVersion": "2026-07-10-001"
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.72",
+  "stockVersion": "2026-08-25-001"
 }
