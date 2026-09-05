@@ -1,15 +1,15 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.72",
-  "buildId": "2026-08-28-v31143-nb-analysis-history-mtd",
-  "buildTime": "2026-08-28T14:12:12Z",
+  "appVersion": "1.5.73",
+  "buildId": "2026-09-05-v31144-kpi-report-day",
+  "buildTime": "2026-09-05T07:25:32Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
-    "availableThrough": "08-2026",
-    "releasedOn": "2026-08-10",
+    "availableThrough": "09-2026",
+    "releasedOn": "2026-09-06",
     "downloads": {
-      "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBlI4aIGmrdSK0XDrZllrs_AZZvlJsb7ed109HDbw2zZw8?e=9brebP",
-      "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQBlI4aIGmrdSK0XDrZllrs_AZZvlJsb7ed109HDbw2zZw8?e=RpRHWr"
+      "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQAup2IPSd6QRYYHbzUYuTUYAZM4gGwCIDL_SAF9I-i0a9g?e=7PvA6m",
+      "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQDlqE9KcPZiTIytrMAXN6HjAV1hpb2XLlomkvrUGa0zKMk?e=xxb39b"
     }
   },
   "paymentMethods": {
@@ -24,22 +24,16 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "NB 分析新增每月獨立 Sales／Margin Target、季度及年度 KPI，並按已設定月份加權計算目標與追數進度",
-      "季度／年度 NB 新增過去紀錄、Segmentation、Last Order 及雙工作表 Excel 匯出，並修正取消單 cohort 與 adjustment 雜訊",
-      "MTD Margin Calculator 可由合併 Sales History 搜尋帳戶及選取 Order，自動帶入 Sales Amount 與加權 Margin",
-      "客戶銷售指標標題改為去年同月 Sales 及 MTD YoY，與實際數據口徑一致",
-      "平台預設產品及庫存資料已更新：Products 2026-08-28-001（5,269 筆），Stock 2026-08-25-001（14,280 筆）",
-      "平台預設 Stock-only Item 現會以無價格虛擬產品加入 Item Code／Description 搜尋，補齊 9,226 個只存在於 stock.default.js 的項目"
+      "KPI Cut Off Day 統一為報表日，所有 MTD、季度及年度數據使用前一個曆日作實際截止日，並支援跨月及跨年",
+      "月尾報表日會正確計算季度剩餘工作日及月份；2026-09-01 報表日以 2026-08-31 截止，只計 9 月 22 個工作日及 1 個月",
+      "NB 分析同時顯示報表日與數據截止日；變更日期會即時重算 Sales、Margin、M0／M1-M5 及帳戶數"
     ],
     "en": [
-      "NB analytics now supports monthly Sales and Margin targets plus quarterly and annual KPIs, with weighted targets and pacing based on configured months",
-      "Quarterly and annual NB history now includes segmentation, last order, and two-sheet Excel export, with fixes for cancelled-order cohorts and adjustment noise",
-      "The MTD Margin Calculator can search merged Sales History by account and select orders to populate Sales Amount and weighted Margin",
-      "Customer sales indicator labels now correctly describe prior-year same-month Sales and MTD YoY",
-      "Platform default product and stock data has been refreshed: Products 2026-08-28-001 (5,269 records) and Stock 2026-08-25-001 (14,280 records)",
-      "Platform Stock-only items are now added to Item Code and Description search as unpriced virtual products, covering 9,226 items found only in stock.default.js"
+      "KPI Cut Off Day now consistently represents the report date; MTD, quarterly, and annual data use the previous calendar day as the actual cutoff, including cross-month and cross-year transitions",
+      "Month-end report dates now calculate quarterly remaining workdays and months correctly; report date 2026-09-01 uses cutoff 2026-08-31 and counts only September with 22 workdays and one month",
+      "NB analysis shows both report date and data cutoff, and date changes immediately recalculate Sales, Margin, M0/M1-M5, and account counts"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.72",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.73",
   "stockVersion": "2026-08-25-001"
 }
