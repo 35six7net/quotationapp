@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.73",
-  "buildId": "2026-09-05-v31144-kpi-report-day",
-  "buildTime": "2026-09-05T07:25:32Z",
+  "appVersion": "1.5.74",
+  "buildId": "2026-09-09-v31145-sales-financial-time-gone",
+  "buildTime": "2026-09-09T09:03:37Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -24,16 +24,17 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "KPI Cut Off Day 統一為報表日，所有 MTD、季度及年度數據使用前一個曆日作實際截止日，並支援跨月及跨年",
-      "月尾報表日會正確計算季度剩餘工作日及月份；2026-09-01 報表日以 2026-08-31 截止，只計 9 月 22 個工作日及 1 個月",
-      "NB 分析同時顯示報表日與數據截止日；變更日期會即時重算 Sales、Margin、M0／M1-M5 及帳戶數"
+      "MTD 當月分析新增 Time Gone 指標：顯示已過工作日佔全月比例，並以百分點標示達成率超前或落後進度",
+      "統一 Sales History、Section、NB、MTD 及 Customer Report 財務口徑：共用解析並保留完整小數；零金額補發不計成交，退貨不推進最近成交日",
+      "修正自訂日期新客報表執行錯誤、產品近 13 個月與 Solution Mix 多計一個月，以及快選「3個月」實際涵蓋 4 個月"
     ],
     "en": [
-      "KPI Cut Off Day now consistently represents the report date; MTD, quarterly, and annual data use the previous calendar day as the actual cutoff, including cross-month and cross-year transitions",
-      "Month-end report dates now calculate quarterly remaining workdays and months correctly; report date 2026-09-01 uses cutoff 2026-08-31 and counts only September with 22 workdays and one month",
-      "NB analysis shows both report date and data cutoff, and date changes immediately recalculate Sales, Margin, M0/M1-M5, and account counts"
+      "Monthly MTD analysis now shows a Time Gone indicator: the share of working days elapsed, with the achievement rate flagged as ahead of or behind pace in percentage points",
+      "Unified financial parsing across Sales History, Section, NB, MTD and Customer Report, keeping full decimal precision; zero-amount replacements are excluded and credit notes no longer advance the last order date",
+      "Fixed a runtime error in the custom-date new customer report, off-by-one month windows in the 13-month product analysis and Solution Mix, and the quick range where 3 months actually covered 4"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.73",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.74",
   "stockVersion": "2026-08-25-001"
 }
+
