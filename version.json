@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.74",
-  "buildId": "2026-09-09-v31145-sales-financial-time-gone",
-  "buildTime": "2026-09-09T09:03:37Z",
+  "appVersion": "1.5.75",
+  "buildId": "2026-09-20-v31146-powerbi-coupon-lunar-schedule",
+  "buildTime": "2026-09-20T02:07:17Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -24,17 +24,17 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "MTD 當月分析新增 Time Gone 指標：顯示已過工作日佔全月比例，並以百分點標示達成率超前或落後進度",
-      "統一 Sales History、Section、NB、MTD 及 Customer Report 財務口徑：共用解析並保留完整小數；零金額補發不計成交，退貨不推進最近成交日",
-      "修正自訂日期新客報表執行錯誤、產品近 13 個月與 Solution Mix 多計一個月，以及快選「3個月」實際涵蓋 4 個月"
+      "Power BI Excel 匯入可在首 20 行自動識別真正欄名，Invoiced Sales、Order Sales 及 Stock Available 無需再手動刪除報表 metadata",
+      "NB coupon restore 會按月份及 Account 回填 Sales／Cash Margin，支援前置零帳號配對、避免重複 adjustment，並為極端 Margin 加上說明提示",
+      "定期訂單新增每月兩次及農曆日子排期，使用香港天文台 2025–2028 對照資料；CSV 密碼視窗亦新增 Power BI Invoiced／Ordered 報表捷徑"
     ],
     "en": [
-      "Monthly MTD analysis now shows a Time Gone indicator: the share of working days elapsed, with the achievement rate flagged as ahead of or behind pace in percentage points",
-      "Unified financial parsing across Sales History, Section, NB, MTD and Customer Report, keeping full decimal precision; zero-amount replacements are excluded and credit notes no longer advance the last order date",
-      "Fixed a runtime error in the custom-date new customer report, off-by-one month windows in the 13-month product analysis and Solution Mix, and the quick range where 3 months actually covered 4"
+      "Power BI Excel imports now detect the real header within the first 20 rows, so Invoiced Sales, Order Sales and Stock Available exports no longer require manual metadata-row removal",
+      "NB coupon restoration now merges Sales and Cash Margin by month and account, matches account numbers with leading-zero differences, avoids duplicate adjustments and explains extreme margin results",
+      "Scheduled orders now support twice-monthly and lunar-day schedules using the Hong Kong Observatory 2025–2028 calendar; the CSV password dialog also adds shortcuts to the Power BI Invoiced and Ordered reports"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.74",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.75",
   "stockVersion": "2026-08-25-001"
 }
 
