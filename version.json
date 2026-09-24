@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.75",
-  "buildId": "2026-09-20-v31146-powerbi-coupon-lunar-schedule",
-  "buildTime": "2026-09-20T02:07:17Z",
+  "appVersion": "1.5.76",
+  "buildId": "2026-09-24-v31147-product-db-required-update-guide",
+  "buildTime": "2026-09-24T14:55:00Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -24,17 +24,17 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "Power BI Excel 匯入可在首 20 行自動識別真正欄名，Invoiced Sales、Order Sales 及 Stock Available 無需再手動刪除報表 metadata",
-      "NB coupon restore 會按月份及 Account 回填 Sales／Cash Margin，支援前置零帳號配對、避免重複 adjustment，並為極端 Margin 加上說明提示",
-      "定期訂單新增每月兩次及農曆日子排期，使用香港天文台 2025–2028 對照資料；CSV 密碼視窗亦新增 Power BI Invoiced／Ordered 報表捷徑"
+      "產品 CSV 上載日期早於官方發布日期時，顯示不可略過的更新視窗，完成上載最新資料後才解除",
+      "Full Year／當月下載區新增 CSV UTF-8 快速提示、詳細教學及手機問號入口",
+      "Product DB manifest cache 會接受背景 polling 的新發布日期，同一頁面即可提示更新"
     ],
     "en": [
-      "Power BI Excel imports now detect the real header within the first 20 rows, so Invoiced Sales, Order Sales and Stock Available exports no longer require manual metadata-row removal",
-      "NB coupon restoration now merges Sales and Cash Margin by month and account, matches account numbers with leading-zero differences, avoids duplicate adjustments and explains extreme margin results",
-      "Scheduled orders now support twice-monthly and lunar-day schedules using the Hong Kong Observatory 2025–2028 calendar; the CSV password dialog also adds shortcuts to the Power BI Invoiced and Ordered reports"
+      "When the uploaded Product CSV predates the official release, a required update dialog remains until the latest data is uploaded and applied",
+      "The Full Year and current-month download area now provides a CSV UTF-8 quick tip, detailed guide and mobile help entry",
+      "Product DB manifest caching now accepts newer release dates found by background polling, enabling same-session update prompts"
     ]
   },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases/tag/v1.5.75",
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
   "stockVersion": "2026-08-25-001"
 }
 
