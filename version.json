@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.76",
-  "buildId": "2026-09-24-v31147-product-db-required-update-guide",
-  "buildTime": "2026-09-24T14:55:00Z",
+  "appVersion": "1.5.77",
+  "buildId": "2026-09-30-v31148-nb-company-kpi-alignment",
+  "buildTime": "2026-09-30T15:40:00Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -24,14 +24,18 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "產品 CSV 上載日期早於官方發布日期時，顯示不可略過的更新視窗，完成上載最新資料後才解除",
-      "Full Year／當月下載區新增 CSV UTF-8 快速提示、詳細教學及手機問號入口",
-      "Product DB manifest cache 會接受背景 polling 的新發布日期，同一頁面即可提示更新"
+      "NB M0／M1-M5 對齊公司 KPI：按 Sold-to 計算，同期季度重新落單唔再當 NB，N6 起轉 EB（當月、季度、年度及過去紀錄一致）",
+      "Customer Report Segmentation 同 NB 用同一套規則；National Leader 視圖保留集團計法",
+      "Account adjustment 合併為單一「調整方式」（剔走整個 account／只剔 NB／加入 EB／加入 NB／只加 NB）；Margin adjustment 只保留 EB／NB",
+      "MTD／NB KPI 保留零 Sales row 的實際 Cash Margin",
+      "Margin adjustment、Account adjustment 及 E-coupon Restore 可刪除最後一行；Sales History Order picker 支援多選及無 Order No. 彙總"
     ],
     "en": [
-      "When the uploaded Product CSV predates the official release, a required update dialog remains until the latest data is uploaded and applied",
-      "The Full Year and current-month download area now provides a CSV UTF-8 quick tip, detailed guide and mobile help entry",
-      "Product DB manifest caching now accepts newer release dates found by background polling, enabling same-session update prompts"
+      "NB M0 / M1-M5 now match the company KPI: Sold-to based, same-quarter reactivations are not NB, and N6 moves to EB across monthly, quarterly, yearly and history views",
+      "Customer Report segmentation uses the same NB rules; the National Leader view keeps the group roll-up",
+      "Account adjustment is now a single 'Adjustment' choice (remove whole account / remove from NB only / add EB / add NB / add to NB only); Margin adjustment keeps EB / NB only",
+      "MTD / NB KPIs keep the actual Cash Margin of zero-Sales rows",
+      "The last row of Margin adjustment, Account adjustment and E-coupon Restore can now be cleared; the Sales History order picker supports multi-select and grouping without Order No."
     ]
   },
   "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
