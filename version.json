@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.77",
-  "buildId": "2026-09-30-v31148-nb-company-kpi-alignment",
-  "buildTime": "2026-09-30T15:40:00Z",
+  "appVersion": "1.5.78",
+  "buildId": "2026-10-07-v31149-sales-area-split",
+  "buildTime": "2026-10-06T21:02:00Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -24,21 +24,20 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "NB M0／M1-M5 對齊公司 KPI：按 Sold-to 計算，同期季度重新落單唔再當 NB，N6 起轉 EB（當月、季度、年度及過去紀錄一致）",
-      "Customer Report Segmentation 同 NB 用同一套規則；National Leader 視圖保留集團計法",
-      "Account adjustment 合併為單一「調整方式」（剔走整個 account／只剔 NB／加入 EB／加入 NB／只加 NB）；Margin adjustment 只保留 EB／NB",
-      "MTD／NB KPI 保留零 Sales row 的實際 Cash Margin",
-      "Margin adjustment、Account adjustment 及 E-coupon Restore 可刪除最後一行；Sales History Order picker 支援多選及無 Order No. 彙總"
+      "MTD／NB／季度／年度新增「按 Sales Area 分拆」，可逐個 Sales 對數（Sold-to 口徑），並可填每人當月 Target",
+      "分拆表可撳入睇 Sold-to 明細：當月展開 Ship-to，季度／年度展開月份；明細已計入 E-coupon Restore",
+      "新增跨 Sales Area 提醒：同一集團嘅 Sold-to 分屬唔同 Sales 時會標示（只作提示，唔影響數字）",
+      "Account adjustment 修正：金額跟 Sales Data 自動計並鎖定、每個 KPI 月份各自儲存、轉 KPI 日期後即時重算、「加入 NB」會一齊加 NB Sales",
+      "如舊版本曾經轉過 KPI 日期，請逐個月檢查 Account adjustment 有冇多咗複製嘅規則"
     ],
     "en": [
-      "NB M0 / M1-M5 now match the company KPI: Sold-to based, same-quarter reactivations are not NB, and N6 moves to EB across monthly, quarterly, yearly and history views",
-      "Customer Report segmentation uses the same NB rules; the National Leader view keeps the group roll-up",
-      "Account adjustment is now a single 'Adjustment' choice (remove whole account / remove from NB only / add EB / add NB / add to NB only); Margin adjustment keeps EB / NB only",
-      "MTD / NB KPIs keep the actual Cash Margin of zero-Sales rows",
-      "The last row of Margin adjustment, Account adjustment and E-coupon Restore can now be cleared; the Sales History order picker supports multi-select and grouping without Order No."
+      "New 'By Sales Area' split under the MTD, NB, quarter and year cards (Sold-to based), with optional per-person monthly targets",
+      "Drill into each Sales Area to see its Sold-to list: Ship-tos for the month, months for the quarter / year; restored E-coupons are included",
+      "New cross Sales Area reminder when Sold-tos of one group sit under different sales reps (display only, numbers unchanged)",
+      "Account adjustment fixes: amounts follow the Sales Data and are locked, rows are saved per KPI month, MTD recalculates right after a KPI date change, and 'Add (NB)' now also adds NB Sales",
+      "If you changed the KPI date in an earlier version, check each month for duplicated Account adjustment rows"
     ]
   },
   "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
   "stockVersion": "2026-08-25-001"
 }
-
