@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.78",
-  "buildId": "2026-10-07-v31149-sales-area-split",
-  "buildTime": "2026-10-06T21:02:00Z",
+  "appVersion": "1.5.80",
+  "buildId": "2026-10-07-v31151-quotation-perf-category",
+  "buildTime": "2026-10-07T13:24:57Z",
   "productsVersion": "2026-08-28-001",
   "productDatabase": {
     "availableThrough": "09-2026",
@@ -28,14 +28,20 @@
       "分拆表可撳入睇 Sold-to 明細：當月展開 Ship-to，季度／年度展開月份；明細已計入 E-coupon Restore",
       "新增跨 Sales Area 提醒：同一集團嘅 Sold-to 分屬唔同 Sales 時會標示（只作提示，唔影響數字）",
       "Account adjustment 修正：金額跟 Sales Data 自動計並鎖定、每個 KPI 月份各自儲存、轉 KPI 日期後即時重算、「加入 NB」會一齊加 NB Sales",
-      "如舊版本曾經轉過 KPI 日期，請逐個月檢查 Account adjustment 有冇多咗複製嘅規則"
+      "如舊版本曾經轉過 KPI 日期，請逐個月檢查 Account adjustment 有冇多咗複製嘅規則",
+      "大報價單（200 行以上）打字同捲動更順；用 Tab 由輸入格跳到按鈕後，畫面唔會再持續變慢",
+      "匯入多行產品時價錢提示計算更快；外觀、運算同匯出結果不變",
+      "匯入多行產品快好多：報價行嘅分類下拉平時只保留已選項目，撳落去先載入完整清單（平板除外）"
     ],
     "en": [
       "New 'By Sales Area' split under the MTD, NB, quarter and year cards (Sold-to based), with optional per-person monthly targets",
       "Drill into each Sales Area to see its Sold-to list: Ship-tos for the month, months for the quarter / year; restored E-coupons are included",
       "New cross Sales Area reminder when Sold-tos of one group sit under different sales reps (display only, numbers unchanged)",
       "Account adjustment fixes: amounts follow the Sales Data and are locked, rows are saved per KPI month, MTD recalculates right after a KPI date change, and 'Add (NB)' now also adds NB Sales",
-      "If you changed the KPI date in an earlier version, check each month for duplicated Account adjustment rows"
+      "If you changed the KPI date in an earlier version, check each month for duplicated Account adjustment rows",
+      "Large quotations (200+ rows) type and scroll more smoothly, and tabbing from an input onto a button no longer leaves the page running slowly",
+      "Price hints are computed faster when many rows are imported; no change to appearance, calculations or exported files",
+      "Importing many rows is much faster: each row's category dropdown now keeps only the selected item and loads the full list when opened (tablets excepted)"
     ]
   },
   "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
