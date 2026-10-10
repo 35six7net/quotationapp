@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.80",
-  "buildId": "2026-10-07-v31151-quotation-perf-category",
-  "buildTime": "2026-10-07T13:24:57Z",
+  "appVersion": "1.5.81",
+  "buildId": "2026-10-09-v31152-sales-history-price-hint",
+  "buildTime": "2026-10-09T07:32:11Z",
   "productsVersion": "2026-10-09-001",
   "productDatabase": {
     "availableThrough": "10-2026",
@@ -31,7 +31,10 @@
       "如舊版本曾經轉過 KPI 日期，請逐個月檢查 Account adjustment 有冇多咗複製嘅規則",
       "大報價單（200 行以上）打字同捲動更順；用 Tab 由輸入格跳到按鈕後，畫面唔會再持續變慢",
       "匯入多行產品時價錢提示計算更快；外觀、運算同匯出結果不變",
-      "匯入多行產品快好多：報價行嘅分類下拉平時只保留已選項目，撳落去先載入完整清單（平板除外）"
+      "匯入多行產品快好多：報價行嘅分類下拉平時只保留已選項目，撳落去先載入完整清單（平板除外）",
+      "報價行新增「過去單價」提示：上載 Sales History 並揀咗客戶後，輸入 item code、撳入或修改單價／數量時，如果客戶以前訂過，會顯示過去單價同最近 5 次訂單，一撳就套用",
+      "產品資料庫更新至 10 月（5,333 項），存貨資料更新至 2026-10-09",
+      "新版本提示同產品資料庫月份改為以 GitHub 為準，發佈後會更快收到更新提示"
     ],
     "en": [
       "New 'By Sales Area' split under the MTD, NB, quarter and year cards (Sold-to based), with optional per-person monthly targets",
@@ -41,7 +44,10 @@
       "If you changed the KPI date in an earlier version, check each month for duplicated Account adjustment rows",
       "Large quotations (200+ rows) type and scroll more smoothly, and tabbing from an input onto a button no longer leaves the page running slowly",
       "Price hints are computed faster when many rows are imported; no change to appearance, calculations or exported files",
-      "Importing many rows is much faster: each row's category dropdown now keeps only the selected item and loads the full list when opened (tablets excepted)"
+      "Importing many rows is much faster: each row's category dropdown now keeps only the selected item and loads the full list when opened (tablets excepted)",
+      "Quotation rows now show the customer's past unit price and last 5 orders (from Sales History) when you enter an item code or edit price / qty, with one-click apply",
+      "Product database updated to October (5,333 items); stock data updated to 2026-10-09",
+      "Update banner and product database month now follow GitHub first, so new releases are noticed sooner"
     ]
   },
   "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
