@@ -1,0 +1,59 @@
+{
+  "$schema": "./version.schema.json",
+  "appVersion": "1.5.84",
+  "buildId": "2026-10-29-v31164-snack-template-update-export",
+  "buildTime": "2026-10-28T02:50:09Z",
+  "productsVersion": "2026-10-28-002",
+  "productDatabase": {
+    "availableThrough": "10-2026",
+    "releasedOn": "2026-10-09",
+    "downloads": {
+      "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQA5EUVOF6qvQq3TGBr5yiQSAfo4T5O0Gkb-XqKPvJH0Xvs?e=Pee8b3",
+      "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQA1IsGEOSABQ49gF3lCFfP9AVyHq3O3Lz5qtSGFcxiyy68?e=sYtuYX"
+    }
+  },
+  "paymentMethods": {
+    "guideQrUrl": "https://www.lyreco.com/group/hongkong/system/files/media-files/2025-11/payment-methods-v3_1.pdf",
+    "paymeMerchantUrl": "https://qr.payme.hsbc.com.hk/2/HaL3kbP1v8dZu49tcmn8jw",
+    "fpsMerchantPayload": "00020101021226290012hk.com.hkicl02091124615125204000053033445802HK5902NA6002HK6304391B"
+  },
+  "holidaysVersion": "2026-05-25",
+  "storageVersion": "2.6.7",
+  "minSupportedVersion": "1.5.0",
+  "forceReload": false,
+  "channel": "stable",
+  "releaseNotes": {
+    "zh-HK": [
+      "產品資料庫加入 Margin Class（2026，未有就用 2025）及產地 Country of Origin（Product of XXX）",
+      "存貨資料加入 Group Status（Delisted／Continued／New／Vacant）、Sustainable selection（Planet／People／Community By Lyreco）及舊制 Green Product",
+      "報價行、編輯視窗及產品搜尋顯示 ⛔ Delisted、🆕 New、🌍 Planet、🤝 People、🏘️ Community、🌿 Green 及產地標籤；Delisted 行加紅色左邊線",
+      "上載新版 Power BI 存貨 Excel 時按表頭讀取欄位（Available Stock 移咗去 L 欄都唔會讀錯）",
+      "資料更新工具：產品卡可另加 Margin Class Excel；存貨卡支援新欄位並顯示 Group Status 統計",
+      "快速批量輸入新增「標籤快速過濾」：🆕 New／🌍 Planet／🤝 People／🏘️ Community／🌿 Green（符合任何一個或全部）及 ⛔ 排除 Delisted；唔輸入編號／關鍵字、唔揀類別，只揀標籤就可以直接加入全部符合產品",
+      "零食套餐新增「Product of」產地欄、產地篩選及「🚫 排除產地」（移除指定產地產品，Load from Quotation 亦自動略過，可復原）",
+      "零食套餐新增 Health／Non-health 欄：逐行或批量設定、可篩選，Health Check 顯示 Health 比例，Excel 匯出包括產地及 Health；標記會記住俾下次載入",
+      "產品資料庫加入 Non Returnable（Margin Class 檔）：報價行、編輯視窗及產品搜尋顯示 🚫 Non Returnable 標籤；快速批量輸入可按此標籤加入或「排除 Non Returnable」",
+      "零食套餐：未有 Product of 嘅產品可以自行輸入產地（有建議清單，會記住）；自動配貨新增「按 Health snack 比例配貨」（例如 Health 70%／Non-health 30%），未設定嘅項目可揀唔配、當 Health 或當 Non-health",
+      "零食套餐圖片：撳圖片只會開 E-Shop 連結；更換圖片改用圖片右上角 ✏️（手機常駐顯示），冇圖嘅項目有「＋ 加圖片」",
+      "自動配貨：新增「🚫 排除產地」（只影響今次配貨，會記住揀選）；改其中一個分類目標 % 時，其餘分類按原本比例自動調整，合計保持 100%",
+      "零食套餐模板：載入後改完可撳「💾 Update」直接覆蓋原模板（顯示目前模板名稱）；新增 Export／Import JSON（全部或單個模板，可多選檔案，重複自動略過，亦接受套餐 Export JSON）"
+    ],
+    "en": [
+      "Product database now carries Margin Class (2026, falling back to 2025) and Country of Origin",
+      "Stock data now carries Group Status (Delisted / Continued / New / Vacant), Sustainable selection (Planet / People / Community by Lyreco) and old-mode Green Product",
+      "Quotation rows, the edit modal and product search show Delisted, New, Planet, People, Community, Green and origin badges; delisted rows get a red left edge",
+      "Stock Excel upload now maps columns by header, so the new Power BI layout (Available Stock in column L) is read correctly",
+      "Data updater: optional Margin Class Excel for products; stock builder reads the new columns and reports Group Status counts",
+      "Quick Batch Entry: tag quick filter for New / Planet / People / Community / Green (any or all) plus Exclude Delisted; ticking tags with no item codes, keywords or categories adds every matching product directly",
+      "Snack Package: new Product of (origin) column, origin filter and Exclude origins (removes those products, also skipped on Load from Quotation, with undo)",
+      "Snack Package: new Health / Non-health column with per-row and batch setting, filter, Health share in Health Check and Excel export; tags are remembered per product",
+      "Product database now carries Non Returnable from the Margin Class file: shown as a badge on rows, the edit modal and search; Quick Batch Entry can filter by it or exclude it",
+      "Snack Package: enter the origin yourself when Product of is missing (with suggestions, remembered per product); Auto Build can split by Health snack ratio (e.g. 70% Health / 30% Non-health), with a choice for untagged items",
+      "Snack Package images: clicking an image only opens the e-shop link; change it with the ✏️ button on the image (always visible on touch), or \"+ Add image\" when there is none",
+      "Auto Build: new Exclude origins (Product of) for that build, remembered; editing one category target % rebalances the others proportionally so the total stays 100%",
+      "Snack Package templates: after loading, \"💾 Update\" overwrites the loaded template (current name shown); new Export / Import JSON for all or single templates (multi-file, duplicates skipped, package JSON accepted)"
+    ]
+  },
+  "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
+  "stockVersion": "2026-10-28-001"
+}
