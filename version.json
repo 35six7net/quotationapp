@@ -1,6 +1,6 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.85",
+  "appVersion": "1.5.86",
   "buildId": "2026-11-04-v31166-ui-refresh-user-guide",
   "buildTime": "2026-11-04T07:00:00Z",
   "productsVersion": "2026-10-29-001",
