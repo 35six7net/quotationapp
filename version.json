@@ -1,8 +1,8 @@
 {
   "$schema": "./version.schema.json",
-  "appVersion": "1.5.85",
-  "buildId": "2026-11-04-v31166-ui-refresh-user-guide",
-  "buildTime": "2026-11-04T07:00:00Z",
+  "appVersion": "1.5.86",
+  "buildId": "2026-11-04-v31168-customer-report-fixall",
+  "buildTime": "2026-11-04T12:30:00Z",
   "productsVersion": "2026-10-29-001",
   "productDatabase": {
     "availableThrough": "11-2026",
@@ -24,24 +24,24 @@
   "channel": "stable",
   "releaseNotes": {
     "zh-HK": [
-      "新增完整使用教學（user-guide.html）：15 章圖文教學，中英文、可搜尋，由首頁「📖 完整使用教學」打開",
-      "首頁「快速開始」改為 5 步卡片，按現時功能重寫，可摺疊並記住",
-      "表單類型全面更新：客戶資料頂部 6 個類型晶片；PDF／HTML 按類型顯示價錢、有效期、付款條款及簽署格（樣品單顯示 FOC、送貨單唔印價錢）",
-      "Lyreco 公司資料及客戶資料面板改版：並排顯示、標題即時摘要、分段子摺疊、縮寫｜全名細掣",
-      "送貨條款重做：11 個常用條款晶片及收貨時間／午膳／可收貨日子／位置／聯絡人／樓梯搬運；PDF、Email、WhatsApp 以獨立「Delivery Terms」顯示",
-      "備註及預設條款改版：套用建議條款可復原、清除內容、條款即時預覽及插入變數、Ctrl／⌘+S 儲存",
-      "品牌與付款資訊改版：QR 類型卡及 PDF 預覽、WhatsApp 自動生成、下載 QR；修正 Logo／浮水印上傳掣冇反應",
-      "匯出郵件選單升級：搜尋範本、⭐ 常用、最近使用、鍵盤操作；報價 Email 加報價摘要並可下載 Outlook 草稿（.eml）"
+      "Customer Report 報表中心：下拉選單換成分類卡片，有說明、搜尋、★ 最愛、最近使用及數據狀態",
+      "一頁設定取代逐個彈窗：報表參數、時間基準、Segmentation、數據欄位、帳號及聯絡人一頁過揀，即時摘要同驗證",
+      "記住每份報表上次設定，卡片「⟳ 上次設定」一撳重跑；可儲存命名 Preset 喺報表中心直接產生",
+      "報表先開預覽：排序、搜尋、Sales Area／Handle By 篩選、欄位顯示、合計、分頁及跳行",
+      "新增 Excel 匯出（凍結標題、篩選、金額／% 格式、負數紅色、報表設定 sheet）及複製表格貼去 Excel／Outlook；CSV 內容不變",
+      "Customer Report 修正：Top N「兩者」模式 crash、欄位錯位及漏咗數據欄位設定；Segmentation Report 問兩次 EDM；New Customer 無下單期間快選日期",
+      "修正：Margin Uplift 開住時新加報價行再套用會重複加價；Sales History 批量分析 CSV 匯出 crash；CSV／JSON 編輯器提示唔顯示；EDM 冇 Logo 時 crash",
+      "客戶資料欄恢復即時提示（必填、電話、Email 格式紅框，唔會擋儲存）；剔選格唔再被螢幕閱讀器讀成文字框"
     ],
     "en": [
-      "New full user guide (user-guide.html): 15 illustrated chapters in Chinese and English with search, opened from \"📖 Full user guide\" on the main page",
-      "Quick start on the main page is now a 5-step card rewritten for current features; collapsible and remembered",
-      "Form types overhauled: 6 type chips in Customer Info; PDF / HTML show prices, validity, payment terms and signature box per type (Sample Order shows FOC, Delivery Note hides prices)",
-      "Lyreco Company Info and Customer Info panels redesigned: side by side, live header summary, grouped sub-sections, Abbreviate | Full name toggle",
-      "Delivery terms rebuilt: 11 quick chips plus receiving hours, lunch, receiving days, location, contact and stair carry; shown as a separate Delivery Terms block in PDF, email and WhatsApp",
-      "Remarks and default terms redesigned: undo for suggested terms, clear, live term preview with variables, Ctrl / ⌘+S to save",
-      "Brand & payment redesigned: QR type cards with PDF preview, WhatsApp auto-generate, QR download; fixed logo / watermark upload buttons doing nothing",
-      "Export Email menu upgraded: template search, pinned and recent templates, keyboard control; quotation email adds a summary and can be downloaded as an Outlook draft (.eml)"
+      "Customer Report centre: the dropdown is now categorised cards with descriptions, search, favourites, recently used and data status",
+      "One-page setup replaces the chain of pop-ups: report options, time basis, segmentation, data columns and account/contacts on one page with live summaries and validation",
+      "Each report remembers its last settings with one-click \"⟳ Last settings\" reruns; save named presets and run them from the report centre",
+      "Reports open in a preview first: sort, search, Sales Area / Handle By filters, column picker, totals, paging and go-to-row",
+      "New Excel export (frozen header, filters, money / % formats, red negatives, report settings sheet) and copy-table for Excel / Outlook; CSV content unchanged",
+      "Customer Report fixes: Top N \"both\" mode crash, misaligned columns and dropped data-column settings; Segmentation Report asking for EDM twice; New Customer no-order quick dates",
+      "Fixed: new quotation rows getting Margin Uplift applied twice when re-applied; Sales History batch-analysis CSV export crash; CSV / JSON editor messages not showing; EDM crash when no logo is set",
+      "Customer fields show live hints again (required, phone, email format; saving is never blocked); checkboxes are no longer announced as text boxes by screen readers"
     ]
   },
   "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
