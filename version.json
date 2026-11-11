@@ -1,41 +1,51 @@
 {
-  "$schema": "./version.schema.json",
-  "appVersion": "1.5.88",
-  "buildId": "2026-11-05-v31170-csv-password-v2",
-  "buildTime": "2026-11-04T17:45:00Z",
-  "productsVersion": "2026-11-04-001",
-  "productDatabase": {
-    "availableThrough": "11-2026",
-    "releasedOn": "2026-11-03",
-    "downloads": {
-      "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQARRfB7UH-DRbb7-lIfoGyWAUm6CmTonRiOG252baMIDC0?e=gd1OAd",
-      "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQABsdWrNVJUTq9pvA1-j2RXAcsQClxYN5IQ1HUp238uFPw?e=ZLo4Oh"
-    }
-  },
-  "paymentMethods": {
-    "guideQrUrl": "https://www.lyreco.com/group/hongkong/system/files/media-files/2025-11/payment-methods-v3_1.pdf",
-    "paymeMerchantUrl": "https://qr.payme.hsbc.com.hk/2/HaL3kbP1v8dZu49tcmn8jw",
-    "fpsMerchantPayload": "00020101021226290012hk.com.hkicl02091124615125204000053033445802HK5902NA6002HK6304391B"
-  },
-  "holidaysVersion": "2026-05-25",
-  "storageVersion": "2.6.7",
-  "minSupportedVersion": "1.5.0",
-  "forceReload": false,
-  "channel": "stable",
-  "releaseNotes": {
-    "zh-HK": [
-      "CSV 自動載入密碼升級：密碼改用 PBKDF2-SHA256 加鹽儲存，取代舊 btoa；舊密碼登入一次就自動轉換，唔使重設",
-      "新增「記住呢部電腦」（7 / 30 / 90 日）：期間開平台唔使再輸入密碼，CSV 資料夾真正自動載入；改密碼後保留，可喺「📂 資料夾載入」取消",
-      "連續輸錯 5 次暫停 30 秒（再錯逐步加長）；密碼可顯示 / 隱藏、Caps Lock 提示、錯誤直接顯示喺對話框",
-      "更改密碼一頁完成：現有 / 新 / 確認密碼、強度提示、唔可以再用預設密碼；「📂 資料夾載入」面板新增「🔐 更改密碼」；忘記密碼重設中途取消唔會清走舊密碼"
-    ],
-    "en": [
-      "CSV auto-load password upgrade: stored with salted PBKDF2-SHA256 instead of btoa; existing passwords (including the default) convert automatically on next sign-in",
-      "New \"Remember this computer\" (7 / 30 / 90 days) so the CSV folder loads without typing the password; kept after a password change, removable in \"📂 Folder sync\"",
-      "Five wrong attempts pause input for 30s (growing after that); show/hide password, Caps Lock hint and inline errors",
-      "One-page password change with strength meter; the default password can no longer be reused; \"🔐 Change password\" added to the Folder sync panel; cancelling a reset no longer wipes the old password"
-    ]
-  },
-  "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
-  "stockVersion": "2026-11-04-001"
+    "$schema": "./version.schema.json",
+    "appVersion": "1.5.90",
+    "buildId": "2026-11-11-v31172-snack-solution-meprice",
+    "buildTime": "2026-11-11T14:30:00Z",
+    "productsVersion": "2026-11-04-001",
+    "productDatabase": {
+        "availableThrough": "11-2026",
+        "releasedOn": "2026-11-03",
+        "downloads": {
+            "fullYear": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQARRfB7UH-DRbb7-lIfoGyWAUm6CmTonRiOG252baMIDC0?e=gd1OAd",
+            "currentMonth": "https://lyreco-my.sharepoint.com/:x:/p/chchan/IQABsdWrNVJUTq9pvA1-j2RXAcsQClxYN5IQ1HUp238uFPw?e=ZLo4Oh"
+        }
+    },
+    "paymentMethods": {
+        "guideQrUrl": "https://www.lyreco.com/group/hongkong/system/files/media-files/2025-11/payment-methods-v3_1.pdf",
+        "paymeMerchantUrl": "https://qr.payme.hsbc.com.hk/2/HaL3kbP1v8dZu49tcmn8jw",
+        "fpsMerchantPayload": "00020101021226290012hk.com.hkicl02091124615125204000053033445802HK5902NA6002HK6304391B"
+    },
+    "holidaysVersion": "2026-05-25",
+    "storageVersion": "2.6.7",
+    "minSupportedVersion": "1.5.0",
+    "forceReload": false,
+    "channel": "stable",
+    "releaseNotes": {
+        "zh-HK": [
+            "Snack Package 載入模板時同產品資料庫對比：自動列出同類（Sub-Category／Category／Family／Section）但模板未有嘅產品補充入模板，可逐項揀；冇成本／冇售價產品可選擇包括；可複製或匯出 Excel",
+            "載入模板亦會列出成本／售價同資料庫唔同嘅項目（可更新），以及資料庫已冇（可能停售）嘅產品（可移除或保留標記）",
+            "管理 Customer Solution 全新介面：卡片清單、搜尋、左右兩欄編輯、即時匹配數；新增關鍵字（例如 fruit）、排除關鍵字／Item Code，預覽表可直接剔走或剔返",
+            "mePrice 設置改版：對照表只填「由」同「目標」（自動接駁冇空隙）、即時驗證、曲線圖、試算實際 mePrice、全部 ±1pp、未保存提示",
+            "下載客戶庫／產品庫可直接存入 CSV 資料夾（backup 子資料夾）、另存為或瀏覽器下載；檔名加日期唔會覆蓋",
+            "反推定價新增「📈 售價 ±%」：每行售價按同一 % 直接加／減（例：+25%、−10%），可按現有售價或 Band 參考價計，預設有封底保護",
+            "反推定價新增「🗂 Section Margin」：按產品 Section 填目標 margin（例：1 → 30%、2 → 40%、5 → 15%），售價直接 = 成本 ÷ (1 − margin%)，設定會記住",
+            "CSV 資料夾自動載入取消預設密碼：預設冇密碼，開平台直接載入；想要密碼可喺「📂 資料夾載入」自行設定、更改或移除（仍用舊預設密碼嘅設定會自動移除）",
+            "忘記密碼改為「抹除並重設」：抹除密碼、「記住呢部電腦」及資料夾連結（已載入資料、草稿唔受影響），再設新密碼（可唔設）及重新揀資料夾；使用教學新增「反推定價（◎）」"
+        ],
+        "en": [
+            "Snack Package: loading a template now compares it with the product database and suggests same-category items it lacks (pick per item, optional no-price items, copy / Excel export)",
+            "Template load also lists cost / price differences (update optional) and template items no longer in the database (remove or keep flagged)",
+            "Customer Solutions redesigned: card list, search, two-column editor, live match counts; new keyword (e.g. fruit) and exclude rules, tick / untick items in the preview",
+            "mePrice settings redesigned: enter only 'from' and target per band (no gaps), live checks, curve chart, real mePrice tester, all ±1pp, unsaved warning",
+            "Customer / product DB downloads can save straight into the CSV folder (backup subfolder), Save As or downloads; dated file names, never overwrite",
+            "Reverse pricing: new \"📈 Price ±%\" mode moves every row by the same % (e.g. +25%, −10%) from the current or band price; floor protection on by default",
+            "Reverse pricing: new \"🗂 Section Margin\" mode prices each product Section from a target margin (e.g. 1 → 30%, 5 → 15%): price = cost ÷ (1 − margin%)",
+            "CSV folder auto-load has no default password any more: the folder loads on launch; set, change or remove your own in \"📂 Folder sync\"",
+            "Forgot password is now \"Erase & reset\": clears the password and folder link (data and drafts stay), then pick the folder again; user guide adds \"Reverse pricing (◎)\""
+        ]
+    },
+    "releaseUrl": "https://github.com/35six7net/quotationapp/releases",
+    "stockVersion": "2026-11-04-001"
 }
