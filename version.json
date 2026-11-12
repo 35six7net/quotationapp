@@ -3,6 +3,8 @@
     "appVersion": "1.5.90",
     "buildId": "2026-11-11-v31172-snack-solution-meprice",
     "buildTime": "2026-11-11T14:30:00Z",
+    "buildId": "2026-11-12-v31173-pricepct-tiers-actual-price",
+    "buildTime": "2026-11-12T02:50:00Z",
     "productsVersion": "2026-11-04-001",
     "productDatabase": {
         "availableThrough": "11-2026",
@@ -24,22 +26,28 @@
     "channel": "stable",
     "releaseNotes": {
         "zh-HK": [
+            "由歷史訂單加入報價（11 個入口，連過去單價提示）一律用最近一張訂單嘅實際單價，唔再將幾張單／幾個月混埋平均；唔再加 -TOTAL 混算總計行",
             "Snack Package 載入模板時同產品資料庫對比：自動列出同類（Sub-Category／Category／Family／Section）但模板未有嘅產品補充入模板，可逐項揀；冇成本／冇售價產品可選擇包括；可複製或匯出 Excel",
             "載入模板亦會列出成本／售價同資料庫唔同嘅項目（可更新），以及資料庫已冇（可能停售）嘅產品（可移除或保留標記）",
             "管理 Customer Solution 全新介面：卡片清單、搜尋、左右兩欄編輯、即時匹配數；新增關鍵字（例如 fruit）、排除關鍵字／Item Code，預覽表可直接剔走或剔返",
             "mePrice 設置改版：對照表只填「由」同「目標」（自動接駁冇空隙）、即時驗證、曲線圖、試算實際 mePrice、全部 ±1pp、未保存提示",
             "下載客戶庫／產品庫可直接存入 CSV 資料夾（backup 子資料夾）、另存為或瀏覽器下載；檔名加日期唔會覆蓋",
+            "反推定價「售價 ±%」新增分段模式：按對 Band 價 ±%（行內單價下面嗰個 %）分段，每段各自減價或加價；唔使撳掣自動列出範圍（用實際最低／最高），減價加價分開計，可揀只減價或只加價",
+            "分段 % 每段顯示 Margin（現 → 新）；自動分段按行金額計最貼近嘅 %，唔會跌穿 Band、照顧 Margin 封底，「同 Band 價嘅差距」用收窄 1/4／一半／3/4／全部揀；反推定價視窗可捲動，預覽行數多咗",
             "反推定價新增「📈 售價 ±%」：每行售價按同一 % 直接加／減（例：+25%、−10%），可按現有售價或 Band 參考價計，預設有封底保護",
             "反推定價新增「🗂 Section Margin」：按產品 Section 填目標 margin（例：1 → 30%、2 → 40%、5 → 15%），售價直接 = 成本 ÷ (1 − margin%)，設定會記住",
             "CSV 資料夾自動載入取消預設密碼：預設冇密碼，開平台直接載入；想要密碼可喺「📂 資料夾載入」自行設定、更改或移除（仍用舊預設密碼嘅設定會自動移除）",
             "忘記密碼改為「抹除並重設」：抹除密碼、「記住呢部電腦」及資料夾連結（已載入資料、草稿唔受影響），再設新密碼（可唔設）及重新揀資料夾；使用教學新增「反推定價（◎）」"
         ],
         "en": [
+            "Adding from order history (all 11 entry points, incl. the past-price hint) now uses the latest order’s actual unit price instead of averaging orders or months; the mixed “-TOTAL” line is gone",
             "Snack Package: loading a template now compares it with the product database and suggests same-category items it lacks (pick per item, optional no-price items, copy / Excel export)",
             "Template load also lists cost / price differences (update optional) and template items no longer in the database (remove or keep flagged)",
             "Customer Solutions redesigned: card list, search, two-column editor, live match counts; new keyword (e.g. fruit) and exclude rules, tick / untick items in the preview",
             "mePrice settings redesigned: enter only 'from' and target per band (no gaps), live checks, curve chart, real mePrice tester, all ±1pp, unsaved warning",
             "Customer / product DB downloads can save straight into the CSV folder (backup subfolder), Save As or downloads; dated file names, never overwrite",
+            "Reverse pricing “Price ±%” adds tiers by ± % vs band price, each with its own cut or rise; ranges list automatically from actual min / max, cuts and rises banded apart, or cut-only / raise-only",
+            "Each tier shows margin (current → new); auto ranges fit by line amount, never cross band, respect the margin floor and close the gap by 1/4 / half / 3/4 / all; more preview rows fit",
             "Reverse pricing: new \"📈 Price ±%\" mode moves every row by the same % (e.g. +25%, −10%) from the current or band price; floor protection on by default",
             "Reverse pricing: new \"🗂 Section Margin\" mode prices each product Section from a target margin (e.g. 1 → 30%, 5 → 15%): price = cost ÷ (1 − margin%)",
             "CSV folder auto-load has no default password any more: the folder loads on launch; set, change or remove your own in \"📂 Folder sync\"",
